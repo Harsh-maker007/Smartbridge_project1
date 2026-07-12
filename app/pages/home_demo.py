@@ -26,13 +26,14 @@ def render_home_demo():
     # ── Check API Key ─────────────────────────────────────────
     api_key = os.environ.get("GEMINI_API_KEY", "")
     if not api_key:
-        st.error(
-            "🔑 **Gemini API Key Required**\n\n"
-            "Add your key in Streamlit Cloud → App Settings → Secrets:\n"
-            "```toml\nGEMINI_API_KEY = \"your_key_here\"\n```\n"
-            "Get a free key at [Google AI Studio](https://aistudio.google.com/)"
-        )
-        st.stop()
+        st.warning("🔑 **Gemini API Key Required**")
+        st.markdown("Please enter your Gemini API key to continue. You can get one for free at [Google AI Studio](https://aistudio.google.com/).")
+        user_key = st.text_input("Gemini API Key", type="password", placeholder="Paste your API key here...")
+        if user_key:
+            os.environ["GEMINI_API_KEY"] = user_key
+            st.rerun()
+        else:
+            st.stop()
 
     # ── Page Header ───────────────────────────────────────────
     st.markdown(

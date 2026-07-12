@@ -21,6 +21,18 @@ from src.utils.helpers import generate_session_id
 
 def render_home():
     """Render the emotion detection home page."""
+    # ── Check API Key ─────────────────────────────────────────
+    import os
+    api_key = os.environ.get("GEMINI_API_KEY", "")
+    if not api_key:
+        st.warning("🔑 **Gemini API Key Required**")
+        st.markdown("Please enter your Gemini API key to continue. You can get one for free at [Google AI Studio](https://aistudio.google.com/).")
+        user_key = st.text_input("Gemini API Key", type="password", placeholder="Paste your API key here...")
+        if user_key:
+            os.environ["GEMINI_API_KEY"] = user_key
+            st.rerun()
+        else:
+            st.stop()
 
     # ── Page Header ───────────────────────────────────────────
     st.markdown(
