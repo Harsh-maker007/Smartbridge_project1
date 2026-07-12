@@ -11,7 +11,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 import pytest
 from src.preprocessing.cleaner import (
     clean_text, clean_for_bilstm, clean_for_bert,
-    remove_html, expand_contractions, remove_urls,
+    remove_html, remove_urls,
 )
 
 
@@ -19,10 +19,6 @@ class TestCleaner:
 
     def test_remove_html(self):
         assert remove_html("<b>Hello</b> World") == " Hello  World"
-
-    def test_expand_contractions(self):
-        result = expand_contractions("I can't understand this")
-        assert "cannot" in result or "can not" in result
 
     def test_remove_urls(self):
         result = remove_urls("Visit https://example.com for help")

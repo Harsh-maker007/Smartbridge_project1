@@ -1,29 +1,24 @@
 # ==============================================================
-# requirements.txt — Streamlit Community Cloud Deployment
-# ==============================================================
-# Uses lightweight packages (no TensorFlow/PyTorch).
-# App runs in Demo Mode: Gemini API handles emotion detection.
-# Full training mode: see requirements_full.txt
+# requirements.txt — Streamlit Community Cloud (Fixed)
+# Relaxed versions, removed build-heavy packages
 # ==============================================================
 
 # ── Web App ───────────────────────────────────────────────────
-streamlit==1.32.2
-streamlit-option-menu==0.3.12
+streamlit>=1.32.0
+streamlit-option-menu>=0.3.6
 
 # ── Google Generative AI (Gemini) ─────────────────────────────
-google-generativeai==0.4.1
+google-generativeai>=0.5.0
 
-# ── NLP Utilities ─────────────────────────────────────────────
-nltk==3.8.1
-contractions==0.1.73
-regex==2024.2.22
+# ── NLP (lightweight only) ───────────────────────────────────
+nltk>=3.8.0
 
 # ── Data Science ──────────────────────────────────────────────
-pandas==2.2.1
-numpy==1.26.4
+pandas>=2.0.0
+numpy>=1.24.0
 
 # ── Visualization ─────────────────────────────────────────────
-plotly==5.20.0
+plotly>=5.18.0
 
 # ── Utilities ─────────────────────────────────────────────────
-python-dotenv==1.0.1
+python-dotenv>=1.0.0

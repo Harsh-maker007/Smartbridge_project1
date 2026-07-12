@@ -9,7 +9,6 @@ punctuation stripping, and stopword filtering.
 import re
 import string
 import nltk
-import contractions
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from src.utils.helpers import get_logger
@@ -50,14 +49,6 @@ _FILTERED_STOP_WORDS = _STOP_WORDS - _NEGATION_WORDS
 def remove_html(text: str) -> str:
     """Strip HTML tags from text."""
     return re.sub(r"<[^>]+>", " ", text)
-
-
-def expand_contractions(text: str) -> str:
-    """Expand contractions (e.g., 'can't' → 'cannot')."""
-    try:
-        return contractions.fix(text)
-    except Exception:
-        return text
 
 
 def remove_urls(text: str) -> str:
@@ -108,8 +99,7 @@ def clean_text(
     """
     Full text cleaning pipeline:
       1. Remove HTML tags
-      2. Expand contractions
-      3. Remove URLs, mentions, hashtags
+      2. Remove URLs, mentions, hashtags
       4. Lowercase
       5. Remove punctuation
       6. Remove standalone numbers
@@ -129,7 +119,6 @@ def clean_text(
         return ""
 
     text = remove_html(text)
-    text = expand_contractions(text)
     text = remove_urls(text)
     text = remove_mentions_hashtags(text)
     text = text.lower()
@@ -161,7 +150,6 @@ def clean_for_bert(text: str) -> str:
     Keeps contractions, punctuation context, and full sentences.
     """
     text = remove_html(text)
-    text = expand_contractions(text)
     text = remove_urls(text)
     text = remove_mentions_hashtags(text)
     text = normalize_whitespace(text)
