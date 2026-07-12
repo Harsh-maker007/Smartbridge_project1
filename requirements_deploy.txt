@@ -1,0 +1,28 @@
+# ============================================================
+# requirements_deploy.txt
+# Lightweight requirements for Streamlit Cloud deployment.
+# Excludes TensorFlow / PyTorch (too heavy for free tier).
+# The app runs in Demo Mode using Gemini API for detection.
+# ============================================================
+
+# ── Web App ───────────────────────────────────────────────────
+streamlit==1.32.2
+streamlit-option-menu==0.3.12
+
+# ── Google Generative AI ──────────────────────────────────────
+google-generativeai==0.4.1
+
+# ── NLP / Text Cleaning ───────────────────────────────────────
+nltk==3.8.1
+contractions==0.1.73
+regex==2024.2.22
+
+# ── Data ──────────────────────────────────────────────────────
+pandas==2.2.1
+numpy==1.26.4
+
+# ── Visualization ─────────────────────────────────────────────
+plotly==5.20.0
+
+# ── Utilities ─────────────────────────────────────────────────
+python-dotenv==1.0.1

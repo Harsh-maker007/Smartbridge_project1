@@ -82,3 +82,6 @@ logs/
 
 # ── HuggingFace Cache ─────────────────────────────────────────
 ~/.cache/huggingface/
+
+# Allow secrets template, block real secrets file
+!.streamlit/secrets.toml

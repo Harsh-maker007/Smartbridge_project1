@@ -1,0 +1,238 @@
+/* ============================================================
+   EmoLearn AI — Custom Streamlit Styles
+   Dark glassmorphism theme with purple accent
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ── Root Variables ──────────────────────────────────────── */
+:root {
+    --bg-primary:   #0F0F1A;
+    --bg-secondary: #1A1A2E;
+    --bg-card:      #16213E;
+    --accent:       #6C63FF;
+    --accent-light: #8B83FF;
+    --text-primary: #E2E8F0;
+    --text-muted:   #94A3B8;
+    --border:       rgba(108, 99, 255, 0.2);
+    --glass:        rgba(26, 26, 46, 0.8);
+    --success:      #10B981;
+    --warning:      #F59E0B;
+    --danger:       #EF4444;
+    --info:         #3B82F6;
+    --radius:       12px;
+    --shadow:       0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* ── Global Reset ────────────────────────────────────────── */
+html, body, [class*="css"] {
+    font-family: 'Inter', sans-serif !important;
+    color: var(--text-primary) !important;
+}
+
+.stApp {
+    background: linear-gradient(135deg, #0F0F1A 0%, #1A1A2E 50%, #16213E 100%);
+    background-attachment: fixed;
+}
+
+/* ── Sidebar ─────────────────────────────────────────────── */
+[data-testid="stSidebar"] {
+    background: var(--bg-secondary) !important;
+    border-right: 1px solid var(--border) !important;
+}
+
+/* ── Cards ───────────────────────────────────────────────── */
+.emotion-card {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    backdrop-filter: blur(12px);
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-bottom: 1rem;
+}
+
+.emotion-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(108, 99, 255, 0.2);
+}
+
+.emotion-emoji {
+    font-size: 3rem;
+    display: block;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50%       { transform: scale(1.05); }
+}
+
+.emotion-label {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.25rem;
+}
+
+.confidence-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    background: rgba(108, 99, 255, 0.2);
+    color: var(--accent-light);
+    border: 1px solid var(--accent);
+}
+
+/* ── Metric Cards ────────────────────────────────────────── */
+.metric-card {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    text-align: center;
+    backdrop-filter: blur(8px);
+}
+
+.metric-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent-light);
+}
+
+.metric-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+}
+
+/* ── Guidance Panel ──────────────────────────────────────── */
+.guidance-panel {
+    background: linear-gradient(135deg, rgba(108, 99, 255, 0.08), rgba(59, 130, 246, 0.05));
+    border: 1px solid rgba(108, 99, 255, 0.3);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    backdrop-filter: blur(12px);
+}
+
+.guidance-panel h2 {
+    color: var(--accent-light) !important;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+/* ── Model Comparison Badges ─────────────────────────────── */
+.model-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.9rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.model-badge-bilstm {
+    background: rgba(59, 130, 246, 0.15);
+    border: 1px solid rgba(59, 130, 246, 0.4);
+    color: #60A5FA;
+}
+
+.model-badge-bert {
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    color: #34D399;
+}
+
+/* ── Mixed Emotion Alert ─────────────────────────────────── */
+.mixed-alert {
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.4);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    color: #FCD34D;
+    font-size: 0.875rem;
+    margin: 0.5rem 0;
+}
+
+/* ── Input Styling ───────────────────────────────────────── */
+.stTextArea textarea {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius) !important;
+    color: var(--text-primary) !important;
+    font-size: 0.95rem !important;
+    transition: border-color 0.2s;
+}
+
+.stTextArea textarea:focus {
+    border-color: var(--accent) !important;
+    box-shadow: 0 0 0 2px rgba(108, 99, 255, 0.2) !important;
+}
+
+/* ── Buttons ─────────────────────────────────────────────── */
+.stButton > button {
+    background: linear-gradient(135deg, #6C63FF, #4F46E5) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 10px !important;
+    padding: 0.6rem 2rem !important;
+    font-weight: 600 !important;
+    font-size: 0.95rem !important;
+    transition: all 0.2s ease !important;
+    box-shadow: 0 4px 12px rgba(108, 99, 255, 0.3) !important;
+}
+
+.stButton > button:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 6px 20px rgba(108, 99, 255, 0.5) !important;
+}
+
+/* ── Dividers ────────────────────────────────────────────── */
+hr {
+    border-color: var(--border) !important;
+    margin: 1.5rem 0 !important;
+}
+
+/* ── Section Headers ─────────────────────────────────────── */
+.section-header {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent-light);
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+/* ── Keyword Tags ────────────────────────────────────────── */
+.keyword-tag {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    background: rgba(108, 99, 255, 0.15);
+    border: 1px solid rgba(108, 99, 255, 0.3);
+    border-radius: 20px;
+    font-size: 0.78rem;
+    color: var(--accent-light);
+    margin: 2px;
+}
+
+/* ── DataFrames ──────────────────────────────────────────── */
+[data-testid="stDataFrame"] {
+    background: var(--bg-card) !important;
+    border-radius: var(--radius) !important;
+}
+
+/* ── Spinner ─────────────────────────────────────────────── */
+.stSpinner > div {
+    border-top-color: var(--accent) !important;
+}
+
+/* ── Scrollbar ───────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-secondary); }
+::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }
