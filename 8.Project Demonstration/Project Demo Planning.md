@@ -16,15 +16,15 @@ A well-structured demo plan ensures that the team presents the project effective
 | S.No | Demo Section | Description | Duration (mins) | Responsible Member |
 |---|---|---|---|---|
 | 1 | Introduction & Problem Statement | Explain the problem: students struggle silently with emotions; generic help doesn't work | 2 | Harsh |
-| 2 | Solution Overview | Introduce Emotion Detector — dual ML models + Gemini AI + Streamlit | 2 | Harsh |
-| 3 | Live Feature Demo — Frustrated Input | Type "I've been stuck on pointers for 3 hours and want to give up" → show emotion detection | 3 | Harsh |
-| 4 | Live Feature Demo — Curious Input | Type "I'm fascinated by how backpropagation works, want to explore more" → show Curious result | 2 | Harsh |
-| 5 | Mixed Emotion Demo | Type ambiguous text → show mixed emotion flag | 1 | Harsh |
+| 2 | Solution Overview | Introduce Emotion Detector — dual ML models + Gemini AI + Streamlit | 2 | Bhaargav |
+| 3 | Live Feature Demo — Frustrated Input | Type "I've been stuck on pointers for 3 hours and want to give up" → show emotion detection | 3 | Manikanta |
+| 4 | Live Feature Demo — Curious Input | Type "I'm fascinated by how backpropagation works, want to explore more" → show Curious result | 2 | Manikanta |
+| 5 | Mixed Emotion Demo | Type ambiguous text → show mixed emotion flag | 1 | Manikanta |
 | 6 | Gemini Guidance Panel | Walk through the 5-section personalized guidance output | 2 | Harsh |
-| 7 | Analytics Dashboard | Show emotion distribution chart, session history, confidence trends | 2 | Harsh |
-| 8 | Model Comparison Page | Show BiLSTM vs BERT architecture cards | 1 | Harsh |
-| 9 | GitHub Repository Walkthrough | Show folder structure, key modules, test suite | 2 | Harsh |
-| 10 | Q&A | Answer evaluator questions | 3 | Harsh |
+| 7 | Analytics Dashboard | Show emotion distribution chart, session history, confidence trends | 2 | Praneeth |
+| 8 | Model Comparison Page | Show BiLSTM vs BERT architecture cards | 1 | Bhaargav |
+| 9 | GitHub Repository Walkthrough | Show folder structure, key modules, test suite | 2 | Praneeth |
+| 10 | Q&A | Answer evaluator questions | 3 | All Members |
 
 **Total Demo Duration: ~20 minutes**
 

@@ -15,12 +15,12 @@ Effective communication is essential for a successful project demonstration. Thi
 
 | S.No | Communication Type | Frequency | Channel / Tool | Participants | Purpose |
 |---|---|---|---|---|---|
-| 1 | Team Standup | Daily | GitHub Commit Log | Harsh (Solo Developer) | Track daily progress and blockers |
+| 1 | Team Standup | Daily | GitHub Commit Log | Team (Harsh, Bhaargav, Manikanta, Praneeth) | Track daily progress and blockers |
 | 2 | Progress Update | Weekly | Self-review Checklist (Markdown task.md) | Developer + Mentor | Ensure milestone targets are on track |
 | 3 | Issue / Bug Discussion | As Needed | GitHub Issues + VS Code Debugger | Developer | Identify and resolve technical bugs |
-| 4 | Stakeholder Review | Bi-Weekly | WhatsApp / Email to Mentor | Developer + Course Mentor | Get feedback on design and direction |
-| 5 | Final Demo Rehearsal | Once | Streamlit Cloud App (Local Test) | Developer | End-to-end demo walkthrough before submission |
-| 6 | Submission Check | Once | Course Portal + GitHub | Developer + Evaluator | Final repository submission verification |
+| 4 | Stakeholder Review | Bi-Weekly | WhatsApp / Email to Mentor | Team + Course Mentor | Get feedback on design and direction |
+| 5 | Final Demo Rehearsal | Once | Streamlit Cloud App (Local Test) | Full Team | End-to-end demo walkthrough before submission |
+| 6 | Submission Check | Once | Course Portal + GitHub | Team + Evaluator | Final repository submission verification |
 
 ---
 
@@ -28,7 +28,7 @@ Effective communication is essential for a successful project demonstration. Thi
 
 | S.No | Challenge Faced | Resolution Applied |
 |---|---|---|
-| 1 | No real-time team feedback (solo project) | Used self-review checklists and AI pair programming (Antigravity) for feedback |
+| 1 | Code integration conflicts | Used Git branching and pull requests to merge code |
 | 2 | Gemini API error messages unclear | Added detailed logging and retry error reporting in `src/gemini/client.py` |
 | 3 | Streamlit Cloud deployment errors not visible in real-time | Used Streamlit's "Manage App" terminal for live log inspection |
 | 4 | Git push rejection due to diverged remote | Resolved via `git pull --rebase origin main` followed by force-safe push |

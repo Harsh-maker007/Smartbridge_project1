@@ -47,7 +47,7 @@
 
 | Resource | Allocation | Tools Used |
 |---|---|---|
-| Developer | 100% (Solo Project — Harsh) | Python, VS Code, GitHub |
+| Developer | 4 Members (Harsh, Bhaargav, Manikanta, Praneeth) | Python, VS Code, GitHub |
 | Compute (Training) | Local GPU / CPU | TensorFlow, PyTorch |
 | API Credits | Google Gemini Free Tier | 1500 req/day |
 | Deployment | Streamlit Community Cloud | Free |
