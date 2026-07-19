@@ -18,7 +18,7 @@ Each team member contributed ideas related to the problem of students struggling
 | 1 | Emotion-Aware Chatbot | A chatbot that senses frustration in a student's message and adapts its response tone | Harsh |
 | 2 | Facial Expression Detector | Use webcam to detect emotions via facial expressions during online learning | Harsh |
 | 3 | Free-Text Emotion Classifier | Analyze student's written description of their study problem to classify emotional state | Bhaargav |
-| 4 | Voice Tone Analysis | Detect emotions from voice recordings submitted by students | Bhaargav |
+| 4 | Voice Tone Analysis | Detect emotions from voice recordings submitted by students | manikanta and Praneeth |
 | 5 | Adaptive Quiz System | Adjust quiz difficulty based on detected student confidence level | Manikanta |
 | 6 | Personalized Study Planner | Generate custom study plans based on detected emotions and learning gaps | Praneeth |
 
